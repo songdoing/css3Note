@@ -1,8 +1,9 @@
 body {
-  text-align: center;
   font-size: 30px;
   color: white;
+  text-align: center;
 }
+
 .container {
   border: 1px solid red;
   width: 1200px;

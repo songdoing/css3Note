@@ -1,0 +1,15 @@
+.parent {
+  background-color: dodgerblue;
+  width: 600px;
+  height: 300px;
+  position: relative;
+}
+.child {
+  background-color: crimson;
+  width: 200px;
+  height: 100px;
+  position: absolute;
+  /* 좌,우,위,아래는 position속성과 꼭 함께 */
+  right: 0;
+  bottom: 0;
+}
