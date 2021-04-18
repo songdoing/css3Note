@@ -10,6 +10,24 @@
   height: 100px;
   position: absolute;
   /* 좌,우,위,아래는 position속성과 꼭 함께 */
+  color: white;
+  font-size: 20px;
+  text-align: center;
+}
+
+.inside1 {
+  top: 0;
+  left: 0;
+}
+.inside2 {
+  top: 0;
   right: 0;
+}
+.inside3 {
   bottom: 0;
+  left: 0;
+}
+.inside4 {
+  bottom: 0;
+  right: 0;
 }
