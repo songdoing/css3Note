@@ -6,7 +6,7 @@
 }
 .child {
   background-color: crimson;
-  width: 200px;
+  width: 100px;
   height: 100px;
   position: absolute;
   /* 좌,우,위,아래는 position속성과 꼭 함께 */
@@ -30,4 +30,9 @@
 .inside4 {
   bottom: 0;
   right: 0;
+}
+.inside5 {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
