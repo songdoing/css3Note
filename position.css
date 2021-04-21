@@ -8,6 +8,7 @@
   background-color: crimson;
   width: 100px;
   height: 100px;
+  border: 3px solid black;
   position: absolute;
   /* 좌,우,위,아래는 position속성과 꼭 함께 */
   color: white;
@@ -35,4 +36,17 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+.outside1 {
+  top: 100%;
+  left: 0;
+}
+.outside2 {
+  top: 0;
+  left: 100%;
+}
+
+.outside3 {
+  top: 100%;
+  left: 100%;
 }
