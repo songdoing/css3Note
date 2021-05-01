@@ -14,3 +14,6 @@ $(".btn").mouseenter(function () {
 $(".btn").mouseleave(function () {
   $("p").hide();
 });
+$(".toggle-btn").click(function () {
+  $("div").slideToggle();
+});
