@@ -1,11 +1,13 @@
 $("p").css({ display: "none" });
 $(".show-btn").click(function () {
   // $("p").css({ display: "block" });
-  $("div").show();
+  // $("div").show();
+  $("div").fadeIn();
 });
 $(".hide-btn").click(function () {
   // $("p").css({ display: "none" });
-  $("div").hide();
+  // $("div").hide();
+  $("div").fadeOut();
 });
 
 $(".btn").mouseenter(function () {
@@ -15,5 +17,6 @@ $(".btn").mouseleave(function () {
   $("p").hide();
 });
 $(".toggle-btn").click(function () {
-  $("div").slideToggle();
+  // $("div").slideToggle();
+  $("div").fadeToggle();
 });
