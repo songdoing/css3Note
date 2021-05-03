@@ -20,3 +20,9 @@ $(".toggle-btn").click(function () {
   // $("div").slideToggle();
   $("div").fadeToggle();
 });
+$(".add-btn").click(function () {
+  $("div").addClass("active");
+});
+$(".remove-btn").click(function () {
+  $("div").removeClass("active");
+});
