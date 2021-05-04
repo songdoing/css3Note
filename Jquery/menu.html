@@ -5,48 +5,30 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>jQuery</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>menu</title>
     <style>
         .menu {
             padding: 0;
             list-style: none;
             width: 200px;
+            text-align: center;
         }
 
         .menu li>a {
             background-color: #000;
             color: #fff;
             display: block;
-            text-align: center;
             padding: 5px;
         }
 
-        a {
-            display: inline-block;
-            color: #000;
-            text-decoration: none;
-            background-color: #ddd;
-            width: 100px;
-            text-align: center;
-            padding: 5px;
-            border-radius: 5px;
-        }
-
-        div {
-            background-color: dodgerblue;
-            height: 400px;
-            margin-top: 10px;
-            width: 400px;
-            color: #fff;
+        .sub-menu {
             display: none;
-            /* 정가운데 글씨오게시리 */
-            text-align: center;
-            line-height: 200px;
         }
 
-        div.active {
-            background-color: red;
+        .sub-menu a {
+            display: block;
+            padding: 5px;
+            text-decoration: none;
         }
     </style>
 </head>
@@ -72,19 +54,9 @@
             </div>
         </li>
     </ul>
-    <a class="show-btn" href="#none">appear</a>
-    <a class="hide-btn" href="#none">disappear</a>
-    <a class="btn" href="#none">Who am I?</a>
-    <a class="toggle-btn" href="#none">Toggle</a>
-    <a class="add-btn" href="#none">red add</a>
-    <a class="remove-btn" href="#none">red remove</a>
-    <p>
-        Hello. I'm Jenny Song.
-    </p>
-    <div>BOX</div>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script src="script/custom.js"></script>
+    <script src="script/menu.js"></script>
 </body>
 
 </html>
