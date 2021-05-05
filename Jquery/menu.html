@@ -30,10 +30,34 @@
             padding: 5px;
             text-decoration: none;
         }
+
+        .btn {
+            /* border : 1px solid red; */
+            width: 300px;
+        }
+
+        .btn span {
+            background-color: #ccc;
+            padding: 5px;
+            width: 100px;
+            display: inline-block;
+            text-align: center;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .btn span.active {
+            background-color: #fff;
+            border: 1px solid #000;
+        }
     </style>
 </head>
 
 <body>
+    <div class="btn">
+        <span>NEWS</span>
+        <span>GALLERY</span>
+    </div>
     <ul class="menu">
         <li>
             <a href="#none">MENU-1</a>

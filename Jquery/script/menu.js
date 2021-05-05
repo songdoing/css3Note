@@ -7,3 +7,8 @@ $(".menu li").mouseenter(function () {
 $(".menu li").mouseleave(function () {
   $(this).children(".sub-menu").stop().slideUp();
 });
+$(".btn span").click(function () {
+  $(this).addClass("active");
+  // 형제는 하나밖에 없기에 괄호안에 아무것도 안 써줌
+  $(this).siblings().removeClass("active");
+});
