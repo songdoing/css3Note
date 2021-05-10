@@ -1,0 +1,29 @@
+body {
+  margin: 0;
+  font-weight: 300;
+  /* center */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+a {
+  text-decoration: none;
+}
+.loading {
+}
+.loading span {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-color: gray;
+  border-radius: 50%;
+  animation: loading 1s linear infinite;
+}
+
+.loading span:nth-child(1) {
+}
+.loading span:nth-child(2) {
+}
+.loading span:nth-child(3) {
+}
