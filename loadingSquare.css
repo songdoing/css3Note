@@ -1,0 +1,18 @@
+body {
+  line-height: 1.5em;
+  margin: 0;
+  font-weight: 300;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+a {
+  text-decoration: none;
+}
+
+.loading {
+  border: 1px solid red;
+  width: 30px;
+  height: 30px;
+}
