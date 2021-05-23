@@ -3,6 +3,10 @@ body {
   margin: 0;
   font-weight: 300;
   background-color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
 a {
@@ -12,10 +16,76 @@ a {
 .square {
   width: 400px;
   height: 400px;
+  /* 부모요소는 relative */
   position: relative;
 }
 .square span {
+  /* 자식요소는 absolute */
   position: absolute;
-  width: 100%;
-  height: 100%;
+  width: inherit;
+  height: inherit;
+  border: 2px solid #fff;
+  /* /를 두고 radius를 맘대로 주면 찌그러진 사각형나옴 */
+  border-radius: 40% 60% 65% 35% / 40% 45% 55% 60%;
+  /* 마우스를 올렸을때 백그라운드컬러가 transition으로 나타나도록 */
+  transition: 0.5s;
+}
+
+.square:hover span {
+  background-color: crimson;
+  border: none;
+}
+.square span:nth-child(1) {
+  animation: circle 6s linear infinite;
+  /* opacity: 0.3; */
+}
+.square span:nth-child(2) {
+  animation: circle 4s linear infinite;
+  /* 반시계방향으로 해서 잼나게 */
+  animation-direction: reverse;
+  /* opacity: 0.5; */
+}
+.square span:nth-child(3) {
+  animation: circle 10s linear infinite;
+  /* opacity: 0.8; */
+}
+/* border라인까지 opacity 안 먹도록 */
+.square:hover span:nth-child(1) {
+  opacity: 0.3;
+}
+.square:hover span:nth-child(2) {
+  opacity: 0.5;
+}
+.square:hover span:nth-child(3) {
+  opacity: 0.8;
+}
+
+/* 시계방향으로 돌리기 */
+@keyframes circle {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.square div {
+  /* border: 1px solid red; */
+  position: absolute;
+  /* 정중앙 */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* div가 position속성을 갖게 되어 inline-block이 되어 width를 줘야 */
+  width: 70%;
+  text-align: center;
+  color: #fff;
+}
+
+.square div a {
+  color: #fff;
+  border-radius: 40% 60% 65% 35% / 40% 45% 55% 60%;
+  border: 1px solid #fff;
+  padding: 8px;
 }
