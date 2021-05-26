@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DropDown Navigation</title>
+    <style>
+        body {
+            color: #222;
+            line-height: 1.5em;
+        }
+
+        a {
+            color: #222;
+            /* body의 컬러를 따르지 않는다 꼭 찝어서 다시 설정 */
+            text-decoration: none;
+        }
+
+        .dropdown {
+            width: 250px;
+        }
+
+        .dropdown-btn {
+            width: inherit;
+            padding: 10px;
+            font-size: 18px;
+            background-color: yellowgreen;
+            color: #fff;
+            border: none;
+            /* 자체적으로 음영이 들어가는데 색만 나도록 */
+            outline: none;
+            /* 클릭했을때 테두리에 선 그어지지 않도록 */
+            cursor: pointer;
+            /* 손가락 모양 나도록 */
+        }
+
+        .dropdown-submenu {
+            display: none;
+            width: inherit;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.17);
+        }
+
+        .dropdown-submenu a {
+            display: block;
+            padding: 7px;
+            text-align: center;
+        }
+
+        .dropdown-submenu a:hover {
+            background-color: #eee;
+        }
+
+        .dropdown:hover .dropdown-submenu {
+            /* dropdown에 hover되면, 자식요소에 실행 */
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- dropdown구성하려면 부모자식형태로 -->
+    <div class="dropdown">
+        <button class="dropdown-btn">Real Estate Type</button>
+        <div class="dropdown-submenu">
+            <a href="#none">All</a>
+            <a href="#none">single house</a>
+            <a href="#none">town house</a>
+            <a href="#none">condo</a>
+            <a href="#none">bungalow</a>
+            <a href="#none">office</a>
+            <a href="#none">apartment</a>
+        </div>
+    </div>
+</body>
+
+</html>
