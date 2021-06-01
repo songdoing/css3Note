@@ -28,18 +28,19 @@
             height: 300px;
             /* item의 자식요소로 caption이 있고, 그 위에 올라타야해 */
             position: relative;
-            /* border: 1px solid red; */
+            border: 1px solid #ddd;
+            margin: 10px;
         }
 
         img {
-            width: inherit;
-            height: inherit;
+            width: 200px;
+            height: 300px;
         }
 
         .caption {
             width: inherit;
             height: inherit;
-            background-color: #000;
+            background-color: rgba(0, 0, 0, 0.7);
             position: absolute;
             /* 위로 붙이기 */
             top: 0;
@@ -49,6 +50,25 @@
             /* padding이 늘어나면서 박스사이징을 처리해줘야 padding이 안으로 들어감 */
             box-sizing: border-box;
             padding-top: 40px;
+            /* display none을 하면 transition을 쓸수 없음 */
+            opacity: 0;
+            transition: 0.5s;
+        }
+
+        .caption a {
+            color: #fff;
+            background-color: teal;
+            padding: 7px;
+            border-radius: 3px;
+        }
+
+        .caption a:hover {
+            background-color: #fff;
+            color: #000;
+        }
+
+        .item:hover .caption {
+            opacity: 1;
         }
     </style>
 </head>
