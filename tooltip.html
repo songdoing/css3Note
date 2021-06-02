@@ -19,8 +19,46 @@
             height: 100vh;
         }
 
+
+        .icon {
+            /* border: 1px solid red; */
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+            position: relative;
+        }
+
         .icon span {
+            position: absolute;
+            /* position:absolute 하면 모든 요소가 inline-block으로 바뀜 */
+            background-color: #000;
+            color: #fff;
+            width: 200px;
+            top: -80px;
+            text-align: center;
+            padding: 10px;
+            border-radius: 5px;
+            /* 정중앙 위에 가도록 */
+            left: 50%;
+            transform: translateX(-50%);
             display: none;
+        }
+
+        .icon span:after {
+            content: '';
+            /* .icon span이 부모인데, 이미 absolute가 있다는 건 relative도 포함 뜻 */
+            position: absolute;
+            background-color: #000;
+            width: 15px;
+            height: 15px;
+            transform: rotate(45deg) translateX(-50%);
+            bottom: -5px;
+            left: 50%;
+            /* transform을 2줄로 쓰면 덮어쓰기 되어 한줄에 씀 */
+        }
+
+        .icon:hover span {
+            display: block;
         }
 
         .icon img {
@@ -35,25 +73,25 @@
         <div class="icon">
             <img src="images/html.jpg" alt="html">
             <span>
-                This HTML
+                This is HTML
             </span>
         </div>
         <div class="icon">
             <img src="images/js.jpg" alt="js">
             <span>
-                This js
+                This is js
             </span>
         </div>
         <div class="icon">
             <img src="images/css.png" alt="css">
             <span>
-                This css
+                This is css
             </span>
         </div>
         <div class="icon">
             <img src="images/react.png" alt="react">
             <span>
-                This react
+                This is react
             </span>
         </div>
     </div>
