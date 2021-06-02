@@ -34,14 +34,18 @@
             background-color: #000;
             color: #fff;
             width: 200px;
-            top: -80px;
+            top: -50px;
             text-align: center;
             padding: 10px;
             border-radius: 5px;
             /* 정중앙 위에 가도록 */
             left: 50%;
             transform: translateX(-50%);
-            display: none;
+            /* display: none; */
+            opacity: 0;
+            transition: 0.5s;
+            /* visibility: hidden; */
+            pointer-events: none;
         }
 
         .icon span:after {
@@ -58,7 +62,9 @@
         }
 
         .icon:hover span {
-            display: block;
+            /* display: block; */
+            opacity: 1;
+            /* visibility: visible; */
         }
 
         .icon img {
