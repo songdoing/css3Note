@@ -46,6 +46,7 @@
             height: 250px;
             display: inline-block;
             position: relative;
+            margin-left: 20px;
         }
 
         .front {
@@ -56,6 +57,7 @@
             width: 100%;
             z-index: 1;
             transition: 0.5s;
+            top: 0;
         }
 
         .front img {
@@ -76,7 +78,9 @@
             height: inherit;
             box-sizing: border-box;
             position: absolute;
+            width: 100%;
             transition: 0.5s;
+            top: 0;
         }
 
         .back p {
@@ -92,6 +96,15 @@
 
         .back a:hover {
             background-color: tomato;
+        }
+
+        /* front와 back에 시작점이 있어야 transition이 먹힘 */
+        .item:hover .front {
+            top: -50%;
+        }
+
+        .item:hover .back {
+            top: 50%;
         }
     </style>
 </head>
