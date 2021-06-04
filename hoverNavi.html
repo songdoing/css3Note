@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hover Navigation</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Space+Mono');
+
+        body {
+            font-family: 'Space Mono', sans-serif;
+            color: #fff;
+            font-size: 15px;
+            line-height: 1.5em;
+            font-weight: 300;
+            background-color: #222;
+            margin: 0;
+        }
+
+        a {
+            color: #222;
+            text-decoration: none;
+        }
+
+        .items {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+
+        }
+
+        /* .items {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        } */
+
+        .item {
+            width: 300px;
+            height: 250px;
+            display: inline-block;
+            position: relative;
+        }
+
+        .front {
+            background-color: #333;
+            text-align: center;
+            height: inherit;
+            position: absolute;
+            width: 100%;
+            z-index: 1;
+            transition: 0.5s;
+        }
+
+        .front img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .front h2 {
+            margin-top: 10%;
+        }
+
+        .back {
+            background-color: #fff;
+            color: #000;
+            padding: 20px;
+            height: inherit;
+            box-sizing: border-box;
+            position: absolute;
+            transition: 0.5s;
+        }
+
+        .back p {
+            margin-top: 0;
+        }
+
+        .back a {
+            background-color: yellowgreen;
+            color: #fff;
+            padding: 5px 15px;
+            border-radius: 20px;
+        }
+
+        .back a:hover {
+            background-color: tomato;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="items">
+        <div class="item">
+            <div class="front">
+                <img src="images/space-01.png" alt="">
+                <h2>Mars</h2>
+            </div>
+            <div class="back">
+                <p>
+                    Mars is the fourth planet from the Sun and the second-smallest planet in the Solar System, being
+                    larger than only Mercury. In English, Mars carries the name of the Roman god of war.
+                </p>
+                <a href="#none">Read More</a>
+            </div>
+        </div>
+
+        <div class="item">
+            <div class="front">
+                <img src="images/space-02.png" alt="">
+                <h2>Jupiter</h2>
+            </div>
+            <div class="back">
+                <p>
+                    Jupiter is the fifth planet from the Sun and the largest in the Solar System. It is a gas giant with
+                    a mass (more than) two and a half times that of all the other planets in the Solar System combined.
+                </p>
+                <a href="#none">Read More</a>
+            </div>
+        </div>
+
+        <div class="item">
+            <div class="front">
+                <img src="images/space-03.png" alt="">
+                <h2>Saturn</h2>
+            </div>
+            <div class="back">
+                <p>
+                    Saturn is the sixth planet from the Sun and the second-largest in the Solar System, after Jupiter.
+                    It is a gas giant with an average radius of about nine and a half times that of Earth.
+                </p>
+                <a href="#none">Read More</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
