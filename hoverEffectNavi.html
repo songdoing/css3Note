@@ -23,8 +23,43 @@
         a {
             text-decoration: none;
             color: #222;
-            display: block;
         }
+
+        .gnb {
+            list-style: none;
+            padding: 50px 30px;
+            width: 600px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            display: flex;
+        }
+
+        .gnb li {
+            /* li는 inline속성이기에 세로 정렬임*/
+            /* 가로정렬 방법 3가지: float:left, display:inline-block, display:flex */
+            /* box-sizing: border-box;
+            float: left;
+            width: 120px; */
+            text-align: center;
+            flex: 1;
+        }
+
+        .gnb li a {
+            font-style: 14px;
+            position: relative;
+        }
+
+        .gnb li a:before {
+            content: '';
+            position: absolute;
+            background-color: dodgerblue;
+            height: 2px;
+            width: 0;
+            bottom: -10px;
+        }
+
+        .gnb li a:hover:before {}
     </style>
 </head>
 
