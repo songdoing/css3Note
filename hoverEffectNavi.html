@@ -57,9 +57,16 @@
             height: 2px;
             width: 0;
             bottom: -10px;
+            transition: 0.5s;
+            /* right: 0; 오른쪽에서 늘어나기*/
+            /* 중심을 수평중앙에 놓고 늘어나기 */
+            left: 50%;
+            transform: translateX(-50%);
         }
 
-        .gnb li a:hover:before {}
+        .gnb li a:hover:before {
+            width: 100%;
+        }
     </style>
 </head>
 
