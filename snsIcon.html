@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SNS Icon Animation</title>
     <style>
+        @import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
         body {
             color: #222;
             line-height: 1.5em;
@@ -17,18 +19,41 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            background-color: #f4f4f4;
         }
 
         a {
             text-decoration: none;
             color: #222;
         }
+
+        .sns {
+            background-color: #f8f8f8;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.13);
+        }
+
+        .sns a {
+            border: 1px solid red;
+            display: inline-block;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background-color: #fff;
+            text-align: center;
+            line-height: 80px;
+        }
     </style>
 </head>
 
 <body>
-
+    <div class="sns">
+        <a href="#none"><i class="fa fa-facebook"></i></a>
+        <a href="#none"><i class="fa fa-twitter"></i></a>
+        <a href="#none"><i class="fa fa-google-plus"></i></a>
+        <a href="#none"><i class="fa fa-linkedin"></i></a>
+        <a href="#none"><i class="fa fa-instagram"></i></a>
+    </div>
 </body>
 
 </html>
