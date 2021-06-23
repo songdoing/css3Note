@@ -54,7 +54,7 @@
             position: absolute;
             width: 100%;
             height: 0;
-            background-color: blue;
+            /* background-color: blue; */
             bottom: 0;
             left: 0;
             transition: 0.5s;
@@ -83,6 +83,16 @@
 
         .sns a:nth-child(5):before {
             background-color: #e4405f;
+        }
+
+        .sns a .fa {
+            position: relative;
+            transition: 0.5s;
+        }
+
+        .sns a:hover .fa {
+            transform: rotateY(360deg);
+            color: #fff;
         }
     </style>
 </head>
