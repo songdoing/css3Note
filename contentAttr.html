@@ -21,6 +21,7 @@
 
         a {
             text-decoration: none;
+            color: #222;
         }
 
         .gnb {
@@ -28,20 +29,47 @@
             padding: 15px;
             border-radius: 10px;
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+            padding-bottom: 10px;
         }
 
         .gnb a {
-            border: 1px solid red;
-            width: 80px;
+            /* border: 1px solid red; */
+            width: 100px;
             height: 30px;
             display: inline-block;
+            line-height: 30px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
         }
 
-        .gnb a span {}
+        .gnb a span {
+            position: absolute;
+            width: inherit;
+            height: inherit;
+            left: 0;
+            top: 0;
+            transition: 0.3s;
+        }
 
-        .gnb a span:nth-child(1) {}
+        .gnb a span:nth-child(1) {
+            top: 0;
+            left: 0;
+        }
 
-        .gnb a span:nth-child(2) {}
+        .gnb a span:nth-child(2) {
+            top: 100%;
+            left: 0;
+            color: #45B649
+        }
+
+        .gnb a:hover span:nth-child(1) {
+            top: -100%;
+        }
+
+        .gnb a:hover span:nth-child(2) {
+            top: 0;
+        }
     </style>
 </head>
 
