@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>content Attr 2</title>
+    <style>
+        body {
+            line-height: 1.5em;
+            font-weight: 300;
+            font-size: 3vh;
+            margin: 0;
+            background: linear-gradient(90deg, #DBE35B, #45B649);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        a {
+            text-decoration: none;
+            color: #222;
+        }
+
+        .gnb {
+            background: #fff;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+            padding-bottom: 10px;
+        }
+
+        .gnb a {
+            /* border: 1px solid red; */
+            width: 100px;
+            height: 30px;
+            display: inline-block;
+            line-height: 30px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="gnb">
+        <!-- 사용자정의 속성 보통 data-단어 -->
+        <a href="#none" data-link="Mail"></a>
+        <a href="#none" data-link="Blog"></a>
+        <a href="#none" data-link="Shopping"></a>
+        <a href="#none" data-link="Pay"></a>
+        <a href="#none" data-link="News"></a>
+    </div>
+</body>
+
+</html>
