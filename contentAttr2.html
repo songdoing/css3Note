@@ -42,6 +42,33 @@
             position: relative;
             overflow: hidden;
         }
+
+        .gnb a:before,
+        .gnb a:after {
+            position: absolute;
+            content: attr(data-link);
+            width: 100%;
+            transition: 0.5s;
+        }
+
+        .gnb a:before {
+            top: 0;
+            left: 0;
+        }
+
+        .gnb a:after {
+            top: 100%;
+            left: 0;
+            color: #45B649;
+        }
+
+        .gnb a:hover:before {
+            top: -100%;
+        }
+
+        .gnb a:hover:after {
+            top: 0;
+        }
     </style>
 </head>
 
