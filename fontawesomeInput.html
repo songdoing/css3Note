@@ -34,6 +34,10 @@
             border-radius: 5px;
             padding: 10px;
             box-sizing: border-box;
+            padding-left: 40px;
+            /* 클릭했을때 outline안 나타나게 */
+            outline: none;
+            transition: 0.5s;
         }
 
         .item .fa {
@@ -41,7 +45,28 @@
             top: 0;
             left: 0;
             color: gray;
-            font-size: 24px;
+            font-size: 20px;
+            /* border: 1px solid blue; */
+            width: 40px;
+            height: 40px;
+            text-align: center;
+            line-height: 40px;
+        }
+
+        /* input에 클릭되었을때(focus) 나자신에게 명령한다  */
+        .item input:focus {
+            border: 1px solid dodgerblue;
+            box-shadow: 0 0 5px dodgerblue;
+        }
+
+        /* input에 focus되었을때 인접선택쟈(+) fa에게 명령한다 */
+        .item input:focus+.fa {
+            color: dodgerblue;
+        }
+
+        /* item에 focus되었을때 자기자신의 placeholder 에게 명령한다 */
+        .item input:focus::placeholder {
+            visibility: hidden;
         }
     </style>
 </head>
