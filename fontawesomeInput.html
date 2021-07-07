@@ -68,6 +68,59 @@
         .item input:focus::placeholder {
             visibility: hidden;
         }
+
+        .item2 {
+            width: 300px;
+            margin-bottom: 10px;
+            position: relative;
+        }
+
+        .item2 input[type=text],
+        .item2 input[type=email],
+        .item2 input[type=tel] {
+            border: 1px solid lightgray;
+            height: 40px;
+            width: inherit;
+            border-radius: 5px;
+            padding: 10px;
+            box-sizing: border-box;
+            padding-left: 50px;
+            /* 클릭했을때 outline안 나타나게 */
+            outline: none;
+            transition: 0.5s;
+        }
+
+
+        .item2 .fa {
+            position: absolute;
+            top: 0;
+            left: 0;
+            color: #fff;
+            background-color: gray;
+            font-size: 20px;
+            /* border: 1px solid blue; */
+            width: 40px;
+            height: 40px;
+            text-align: center;
+            line-height: 40px;
+            border-radius: 5px 0 0 5px;
+        }
+
+        /* input에 클릭되었을때(focus) 나자신에게 명령한다  */
+        .item2 input:focus {
+            border: 1px solid dodgerblue;
+            box-shadow: 0 0 5px dodgerblue;
+        }
+
+        /* input에 focus되었을때 인접선택쟈(+) fa에게 명령한다 */
+        .item2 input:focus+.fa {
+            background-color: dodgerblue;
+        }
+
+        /* item에 focus되었을때 자기자신의 placeholder 에게 명령한다 */
+        .item2 input:focus::placeholder {
+            visibility: hidden;
+        }
     </style>
 </head>
 
@@ -82,6 +135,19 @@
             <i class="fa fa-envelope"></i>
         </div>
         <div class="item">
+            <input type="tel" placeholder="Phone Number">
+            <i class="fa fa-phone"></i>
+        </div>
+
+        <div class="item2">
+            <input type="text" placeholder="Your Name">
+            <i class="fa fa-user"></i>
+        </div>
+        <div class="item2">
+            <input type="email" placeholder="Email">
+            <i class="fa fa-envelope"></i>
+        </div>
+        <div class="item2">
             <input type="tel" placeholder="Phone Number">
             <i class="fa fa-phone"></i>
         </div>
