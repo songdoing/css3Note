@@ -77,8 +77,9 @@
         background-color: #000;
         color: #fff;
         text-align: center;
+        width: 100%;
         height: 250px;
-        bottom: -250px;
+        bottom: -300px;
         transition: 0.5s;
         padding: 20px;
         padding-top: 50px;
@@ -100,9 +101,11 @@
         position: absolute;
         background-color: red;
         width: 100%;
-        height: 50px;
+        height: 80px;
         left: 0;
-        top: -50px;
+        top: 0;
+        /* 어디를 기준으로 transform을 할 것인지..기준 */
+        transform-origin: left bottom;
         transform: rotate(-5deg) scale(1.3);
     }
 </style>
