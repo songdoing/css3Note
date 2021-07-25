@@ -35,9 +35,14 @@
             height: 30px;
             display: block;
             /* border: 1px solid red; */
-            position: relative;
+            position: absolute;
             cursor: pointer;
-
+            /* position이 relative이면 right:10px이 안 먹힘, absolute로  */
+            right: 10px;
+            top: 50%;
+            /* 수직중앙 */
+            transform: translateY(-50%);
+            transition: 0.5s;
         }
 
         label[for=trigger] span {
@@ -73,6 +78,33 @@
             top: 50%;
             transform: rotate(-45deg);
         }
+
+        /* sidebar */
+        .sidebar {
+            background-color: #000;
+            width: 150px;
+            height: 100vh;
+            position: fixed;
+            right: -150px;
+            transition: 0.5s;
+        }
+
+        .sidebar a {
+            display: block;
+            color: #fff;
+            text-decoration: none;
+            margin-top: 10px;
+            margin-left: 5px;
+        }
+
+        /* 형제선택자 */
+        input[id=trigger]:checked~.sidebar {
+            right: 0;
+        }
+
+        input[id=trigger]:checked+label[for=trigger] {
+            right: 160px;
+        }
     </style>
 </head>
 
@@ -84,6 +116,15 @@
             <span></span>
             <span></span>
         </label>
+        <!-- 인접선택자 하려면 하위계층으로만 할수 있음, 따라서 container안에 둘겄 -->
+        <div class="sidebar">
+            <a href="#none">HOME</a>
+            <a href="#none">MEN</a>
+            <a href="#none">WOMEN</a>
+            <a href="#none">CHILD</a>
+            <a href="#none">PROMOTION</a>
+            <a href="#none">CONTACTUS</a>
+        </div>
     </div>
 </body>
 
