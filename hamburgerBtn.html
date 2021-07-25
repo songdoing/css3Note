@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hamburger Button</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+
+        @import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+        body {
+            font-family: 'Raleway', sans-serif;
+            line-height: 1.5em;
+            margin: 0;
+            font-weight: 300;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #222;
+        }
+
+        a {
+            text-decoration: none;
+            color: #222;
+        }
+
+        .container {}
+
+        /* 무수한 input안에서도 id가 trigger인 애를 콕 찝어주는 */
+        input[id=trigger] {
+            display: none;
+            /* input과 label를 쌍으로 묶어놓았기 때문에 */
+        }
+
+        label[for=trigger] {
+            /* border: 1px solid red; */
+            width: 400px;
+            height: 300px;
+            display: block;
+            position: relative;
+            cursor: pointer;
+        }
+
+        label[for=trigger] span {
+            position: absolute;
+            /* position:absolute는 inline block이 되므로 찌부되어 보이지 않음, width를 줘야
+             */
+            width: 100%;
+            height: 20px;
+            background-color: #000;
+            transition: 0.5s;
+
+        }
+
+        label[for=trigger] span:nth-child(1) {
+            top: 0;
+        }
+
+        label[for=trigger] span:nth-child(2) {
+            top: 50%;
+        }
+
+        label[for=trigger] span:nth-child(3) {
+            top: 100%;
+        }
+
+        /* 눌렀을때..checkbox가 checked되었을때
+         */
+        input[id=trigger]:checked+label[for=trigger] span:nth-child(1) {
+            top: 50%;
+            transform: rotate(45deg);
+        }
+
+        input[id=trigger]:checked+label[for=trigger] span:nth-child(2) {
+            opacity: 0;
+        }
+
+        input[id=trigger]:checked+label[for=trigger] span:nth-child(3) {
+            top: 50%;
+            transform: rotate(-45deg);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- input과 label를 짝궁을 만들어주는..id 와 for에 같은 -->
+        <input type="checkbox" id="trigger">
+        <label for="trigger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+    </div>
+
+</body>
+
+</html>
