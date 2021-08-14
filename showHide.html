@@ -20,13 +20,71 @@
             margin: 0;
             font-weight: 300;
             color: #222;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
         }
 
         a {
             text-decoration: none;
             color: #222;
         }
+
+        .tab-inner {
+            border: 1px solid red;
+            width: 300px;
+            height: 350px;
+            position: relative;
+        }
+
+        input[name=tabmenu] {
+            display: none;
+        }
+
+        .content {
+            display: none;
+        }
+
+        .btn {
+            position: absolute;
+            text-align: center;
+            /* position이 absolute이므로 inline-block이 되면서 
+            text-align : center 그냥은 안 통한다.
+            width를 100%로 잡아주면 된다.*/
+            width: 100%;
+            bottom: 0;
+        }
+
+        .btn label {
+            background-color: lightgray;
+            width: 20px;
+            height: 20px;
+            display: inline-block;
+            border-radius: 50%;
+            cursor: pointer;
+        }
     </style>
+    <div class="tab-inner">
+        <input type="radio" name="tabmenu" id="tab1" checked>
+        <input type="radio" name="tabmenu" id="tab2">
+        <input type="radio" name="tabmenu" id="tab3">
+
+        <div class="content slide1">
+            <img src="images/slide-01.jpg" alt="coconut cream">
+        </div>
+        <div class="content slide2">
+            <img src="images/slide-02.jpg" alt="rose flowers">
+        </div>
+        <div class="content slide3">
+            <img src="images/slide-03.jpg" alt="charcoal mask">
+        </div>
+        <div class="btn">
+            <label for="tab1"></label>
+            <label for="tab2"></label>
+            <label for="tab3"></label>
+        </div>
+    </div>
 
 </body>
 
