@@ -43,7 +43,17 @@
         }
 
         .content {
-            display: none;
+            /* display: none; */
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            visibility: hidden;
+            /* opacity는 존재하나 눈에만 안 보이는 것뿐 */
+            /* visibility hidden을 해야 아예 존재 안 하는 것. 자리는 그대로*/
+            /* 이미지 1,2,3이 쌓여있는 데 존재 안 하게 해야, a태그 제대로 먹힘 */
+            /* display none 아예 존재 안 하고, 자리도 사라짐 */
+            transition: 0.5s;
         }
 
         .btn {
@@ -68,7 +78,9 @@
         input[id=tab1]:checked~.slide1,
         input[id=tab2]:checked~.slide2,
         input[id=tab3]:checked~.slide3 {
-            display: block;
+            /* display: block; */
+            opacity: 1;
+            visibility: visible;
         }
 
         input[id=tab1]:checked~.btn label[for=tab1],
@@ -84,13 +96,13 @@
         <input type="radio" name="tabmenu" id="tab3">
 
         <div class="content slide1">
-            <img src="images/slide-01.jpg" alt="coconut cream">
+            <a href="#none1"><img src="images/slide-01.jpg" alt="coconut cream"></a>
         </div>
         <div class="content slide2">
-            <img src="images/slide-02.jpg" alt="rose flowers">
+            <a href="#none2"><img src="images/slide-02.jpg" alt="rose flowers"></a>
         </div>
         <div class="content slide3">
-            <img src="images/slide-03.jpg" alt="charcoal mask">
+            <a href="#none3"><img src="images/slide-03.jpg" alt="charcoal mask"></a>
         </div>
         <div class="btn">
             <label for="tab1"></label>
