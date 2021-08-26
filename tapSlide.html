@@ -41,11 +41,26 @@
             display: none;
         }
 
-        .slide {}
+        .slide {
+            position: relative;
+            width: 300px;
+            height: 300px;
+        }
 
-        .slide-inner {}
+        .slide-inner {
+            width: 900px;
+            /* 사진사이에 마진이 조금 있기에 3장이 한줄에 안 들어옴 */
+            font-size: 0;
+            /* 마진은 font로 읽힘 */
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
 
-        .btn {}
+        .btn {
+            text-align: center;
+            margin-top: 10px;
+        }
 
         .btn label {
             display: inline-block;
@@ -53,6 +68,7 @@
             height: 20px;
             background-color: lightgray;
             border-radius: 50%;
+            cursor: pointer;
         }
     </style>
 
