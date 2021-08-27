@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>testimonial - tab slider</title>
+</head>
+
+<body>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+
+        @import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+        body {
+            font-family: 'Raleway', sans-serif;
+            line-height: 1.5em;
+            margin: 0;
+            font-weight: 300;
+            color: #222;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        a {
+            text-decoration: none;
+            color: #222;
+        }
+
+        .tab-inner {}
+
+        input[name=tabmenu] {
+            display: none;
+        }
+
+        .tabs {
+            border: 1px solid red;
+            width: 800px;
+            height: 400px;
+        }
+
+        .items {}
+
+        .items div {}
+
+        .btn {}
+
+        .btn label {}
+    </style>
+    <div class="tab-inner">
+        <input type="radio" name="tabmenu" id="tab1" checked>
+        <input type="radio" name="tabmenu" id="tab2">
+        <input type="radio" name="tabmenu" id="tab3">
+
+        <h1>Testimonials</h1>
+        <div class="tabs">
+            <!-- 1장 -->
+            <div class="items">
+                <!-- 3장 크기 -->
+                <div>content1</div>
+                <div>content2</div>
+                <div>content3</div>
+            </div>
+        </div>
+        <div class="btn">
+            <label for="tab1"></label>
+            <label for="tab2"></label>
+            <label for="tab3"></label>
+        </div>
+    </div>
+</body>
+
+</html>
