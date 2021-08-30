@@ -31,7 +31,10 @@
             color: #222;
         }
 
-        .tab-inner {}
+        .tab-inner {
+            height: 500px;
+            border: 1px solid green;
+        }
 
         input[name=tabmenu] {
             display: none;
@@ -41,15 +44,38 @@
             border: 1px solid red;
             width: 800px;
             height: 400px;
+            position: relative;
         }
 
-        .items {}
+        .items {
+            width: 2400px;
+            /* 자식한테 float left가 있어서 부모가 height를 잃음 */
+            height: 400px;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
 
-        .items div {}
+        .items div {
+            border: 1px solid blue;
+            width: 800px;
+            height: 400px;
+            float: left;
+            box-sizing: border-box;
+        }
 
-        .btn {}
+        .btn {
+            text-align: center;
+        }
 
-        .btn label {}
+        .btn label {
+            width: 10px;
+            height: 10px;
+            background-color: lightgray;
+            border-radius: 50%;
+            display: inline-block;
+            cursor: pointer;
+        }
     </style>
     <div class="tab-inner">
         <input type="radio" name="tabmenu" id="tab1" checked>
