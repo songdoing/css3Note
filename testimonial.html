@@ -45,6 +45,8 @@
             width: 800px;
             height: 400px;
             position: relative;
+            overflow: hidden;
+
         }
 
         .items {
@@ -54,6 +56,7 @@
             position: absolute;
             top: 0;
             left: 0;
+            transition: 0.5s;
         }
 
         .items div {
@@ -62,6 +65,8 @@
             height: 400px;
             float: left;
             box-sizing: border-box;
+            text-align: center;
+            padding: 40px;
         }
 
         .btn {
@@ -76,6 +81,31 @@
             display: inline-block;
             cursor: pointer;
         }
+
+        .items div img {
+            width: 100px;
+            border-radius: 50%;
+        }
+
+        .items div p b {
+            display: block;
+        }
+
+        .items div p span {
+            color: orange;
+        }
+
+        input[id=tab1]:checked~.tabs .items {
+            left: 0;
+        }
+
+        input[id=tab2]:checked~.tabs .items {
+            left: -800px;
+        }
+
+        input[id=tab3]:checked~.tabs .items {
+            left: -1600px;
+        }
     </style>
     <div class="tab-inner">
         <input type="radio" name="tabmenu" id="tab1" checked>
@@ -87,9 +117,47 @@
             <!-- 1장 -->
             <div class="items">
                 <!-- 3장 크기 -->
-                <div>content1</div>
-                <div>content2</div>
-                <div>content3</div>
+                <div>
+                    <img src="images/face-01.jpg">
+                    <p>
+                        As we all know, it’s easy for marketers to brag about how great their product or service is.
+                        Writing compelling copy, shooting enticing photos, or even producing glamorous videos are all
+                        tactics we use to draw attention to our brands. While all of these strategies can be successful,
+                        there really is no better way to gain trust and prove the validity of your brand like customer
+                        testimonials.
+                    </p>
+                    <p>
+                        <b>Ackerley</b>
+                        Media Analyst at <span>ZenDesk</span>
+                    </p>
+                </div>
+                <div>
+                    <img src="images/face-02.jpg">
+                    <p>
+                        ZenDesk’s testimonial page is beautifully laid out AND functional, with a silent customer video
+                        playing on loop to serve as the banner, a menu to filter testimonials by location, company size,
+                        industry, and use case, and lastly thumbnails linking to the full customer stories for a variety
+                        of big-name brands. This is a clean and concise way to showcase their happy customers.
+                    </p>
+                    <p>
+                        <b>Dabria</b>
+                        Graphic Designer at <span>ChowNow</span>
+                    </p>
+                </div>
+                <div>
+                    <img src="images/face-03.jpg">
+                    <p>
+                        As we all know, it’s easy for marketers to brag about how great their product or service is.
+                        Writing compelling copy, shooting enticing photos, or even producing glamorous videos are all
+                        tactics we use to draw attention to our brands. While all of these strategies can be successful,
+                        there really is no better way to gain trust and prove the validity of your brand like customer
+                        testimonials.
+                    </p>
+                    <p>
+                        <b>Vadim</b>
+                        Developer at <span>Startup Institute</span>
+                    </p>
+                </div>
             </div>
         </div>
         <div class="btn">
