@@ -69,7 +69,7 @@
             /* border: 1px solid blue; */
             width: 800px;
             height: 400px;
-            float: left;
+            /* float: left; */
             box-sizing: border-box;
             text-align: center;
             padding: 50px;
@@ -83,9 +83,10 @@
             width: 10px;
             height: 10px;
             background-color: lightgray;
-            border-radius: 50%;
+            /* border-radius: 50%; */
             display: inline-block;
             cursor: pointer;
+            transition: 0.3s;
         }
 
         .items div img {
@@ -102,15 +103,25 @@
         }
 
         input[id=tab1]:checked~.tabs .items {
-            left: 0;
+            /* left: 0; */
+            top: 0;
         }
 
         input[id=tab2]:checked~.tabs .items {
-            left: -800px;
+            /* left: -800px; */
+            top: -400px;
         }
 
         input[id=tab3]:checked~.tabs .items {
-            left: -1600px;
+            /* left: -1600px; */
+            top: -800px;
+        }
+
+        input[id=tab1]:checked~.btn label[for=tab1],
+        input[id=tab2]:checked~.btn label[for=tab2],
+        input[id=tab3]:checked~.btn label[for=tab3] {
+            background-color: crimson;
+            border-radius: 50%;
         }
     </style>
     <div class="tab-inner">
