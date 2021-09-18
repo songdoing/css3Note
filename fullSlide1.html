@@ -39,12 +39,19 @@
 
         .tabs {
             overflow: hidden;
+            position: relative;
+            /* 자식요소인 items가 position:absolute이므로 높이값을 잃는다 */
+            height: 100vh;
         }
 
         .items {
             /* border: 1px solid red; */
             height: 100vh;
             width: 300%;
+            transition: 0.5s;
+            position: absolute;
+            top: 0;
+            left: 0;
         }
 
         .items div {
@@ -81,7 +88,8 @@
             bottom: 20px;
             /* 중앙에 놓이게 할때
             left : 50%;
-            transform : translateX(-50%); */
+            transform : translateX(-50%); 해도 되지만
+            absolute포지션이면 무조건 inline-block이 됨을 이용*/
             text-align: center;
             width: 100%;
         }
@@ -92,6 +100,27 @@
             width: 50px;
             background-color: white;
             cursor: pointer;
+        }
+
+        input[id=tab1]:checked~.tabs .items {
+            /* 움직일것이 items이므로 items에 가서 transition줄것 */
+            left: 0;
+        }
+
+        input[id=tab2]:checked~.tabs .items {
+            /* 움직일것이 items이므로 items에 가서 transition줄것 */
+            left: -100%;
+        }
+
+        input[id=tab3]:checked~.tabs .items {
+            /* 움직일것이 items이므로 items에 가서 transition줄것 */
+            left: -200%;
+        }
+
+        input[id=tab1]:checked~.tabs .btn label[for=tab1],
+        input[id=tab2]:checked~.tabs .btn label[for=tab2],
+        input[id=tab3]:checked~.tabs .btn label[for=tab3] {
+            background-color: #000;
         }
     </style>
 
