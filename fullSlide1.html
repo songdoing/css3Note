@@ -94,6 +94,11 @@
             width: 100%;
         }
 
+        .arrows {
+            position: absolute;
+
+        }
+
         .btn label {
             display: inline-block;
             height: 5px;
@@ -101,6 +106,8 @@
             background-color: white;
             cursor: pointer;
         }
+
+
 
         input[id=tab1]:checked~.tabs .items {
             /* 움직일것이 items이므로 items에 가서 transition줄것 */
@@ -140,6 +147,7 @@
                     <h1>Slide Content 03</h1>
                 </div>
             </div>
+
             <div class="btn">
                 <label for="tab1"></label>
                 <label for="tab2"></label>
