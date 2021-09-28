@@ -71,16 +71,19 @@
         .items div:nth-child(1) {
             background: url(images/photo-01.jpg) no-repeat center center;
             background-size: cover;
+            background-attachment: fixed;
         }
 
         .items div:nth-child(2) {
             background: url(images/photo-02.jpg) no-repeat center center;
             background-size: cover;
+            background-attachment: fixed;
         }
 
         .items div:nth-child(3) {
             background: url(images/photo-03.jpg) no-repeat center center;
             background-size: cover;
+            background-attachment: fixed;
         }
 
         .items div:nth-child(1)::before,
@@ -108,26 +111,29 @@
             font-size: 80px;
             font-weight: normal;
             color: #fff;
+            position: relative;
         }
 
         .btn {
             position: absolute;
-            bottom: 20px;
+            bottom: 0;
             /* 중앙에 놓이게 할때
             left : 50%;
             transform : translateX(-50%); 해도 되지만
             absolute포지션이면 무조건 inline-block이 됨을 이용*/
             text-align: center;
             width: 100%;
+            height: 50px;
+            line-height: 50px;
+            background-color: rgba(0, 0, 0, 0.3);
         }
 
 
         .btn label {
             display: inline-block;
-            height: 5px;
-            width: 50px;
-            background-color: white;
+            color: #fff;
             cursor: pointer;
+            margin: 0 15px;
         }
 
 
@@ -150,8 +156,7 @@
         input[id=tab1]:checked~.tabs .btn label[for=tab1],
         input[id=tab2]:checked~.tabs .btn label[for=tab2],
         input[id=tab3]:checked~.tabs .btn label[for=tab3] {
-
-            background-color: #000;
+            color: #000;
         }
     </style>
 
@@ -173,9 +178,9 @@
             </div>
 
             <div class="btn">
-                <label for="tab1"></label>
-                <label for="tab2"></label>
-                <label for="tab3"></label>
+                <label for="tab1">Graphic</label>
+                <label for="tab2">Web publishing</label>
+                <label for="tab3">Web design</label>
             </div>
         </div>
     </div>
