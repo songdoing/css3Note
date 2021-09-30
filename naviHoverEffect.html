@@ -40,7 +40,7 @@
             height: 2px;
             width: 0;
             bottom: 0;
-            transition: 0.3s;
+            transition: 0.5s;
 
         }
 
@@ -56,12 +56,64 @@
             height: 2px;
             width: 0;
             bottom: 0;
-            transition: 0.3s;
+            transition: 0.5s;
             right: 0;
         }
 
         .gnb a:nth-child(2):hover:before {
             width: 100%;
+        }
+
+        .gnb a:nth-child(3):before {
+            content: '';
+            position: absolute;
+            background-color: crimson;
+            /* display: inline-block; */
+            height: 4px;
+            width: 4px;
+            bottom: 0;
+            transition: 2s;
+            left: 0;
+        }
+
+        .gnb a:nth-child(3):hover:before {
+            /* left: 100%;
+            더 정확히 하려면.. */
+            left: calc(100% - 4px);
+        }
+
+        .gnb a:nth-child(4):before {
+            content: '';
+            position: absolute;
+            background-color: crimson;
+            /* display: inline-block; */
+            height: 2px;
+            width: 0;
+            bottom: 0;
+            transition: 0.5s;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .gnb a:nth-child(4):hover:before {
+            width: 100%;
+        }
+
+        .gnb a:nth-child(5):before {
+            content: '';
+            position: absolute;
+            background-color: crimson;
+            /* display: inline-block; */
+            height: 2px;
+            width: 100%;
+            bottom: 0;
+            transition: 0.5s;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .gnb a:nth-child(5):hover:before {
+            width: 0;
         }
     </style>
 </head>
